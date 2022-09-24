@@ -5,7 +5,9 @@ import PartList from './components/PartList.js';
 import PartDetail from './components/PartDetail.js';
 
 import { getParts } from './utils/partService.js';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext} from 'react';
+
+export const PartContext = createContext();
 
 function App() {
 
@@ -16,15 +18,13 @@ function App() {
     getParts().then(partList => setParts(partList))  
   }, [])
 
-  // Git comment
-
   return (
 
-    <>
-     <Navbar/>
-     <PartList parts={parts} setParts={setParts}/>
-     <PartDetail part={part} setPart={setPart}/>
-    </>
+    <PartContext.Provider value={{ parts, setParts, part, setPart }}>
+      <Navbar/>
+      <PartList parts={parts} />
+      <PartDetail />
+    </PartContext.Provider>
   );
 }
 
