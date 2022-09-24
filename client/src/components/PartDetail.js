@@ -50,12 +50,15 @@ const PartDetail = () => {
       <div className="w-1/2">
         <ImageGallery items={ images } />
       </div>
-      <div className="w-1/3 m-5">
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{part.part_short_name}</div>
-          <p className="text-gray-700 text-base">
+      <div className="">
+        <div className="p-10">
+          <div className="font-bold text-2xl mb-2">{part.part_short_name}</div>
+          <p className="text-gray-700 text-lg mb-2">
             {part.part_long_name}
           </p>
+          <div className="flex justify-center">
+            <button className="bg-green-600 rounded-md m-4 px-6 py-2 text-lg text-white font-semibold">Buy</button>
+          </div>
         </div>
       </div>
     </div>
@@ -67,6 +70,7 @@ const PartDetail = () => {
 export default PartDetail;
 
 
+// pt-10 pl-10
 
 
 
