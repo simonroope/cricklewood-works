@@ -23,6 +23,18 @@ module.exports = (sequelize, DataTypes) => sequelize.define('Part', {
     type: DataTypes.STRING,
     allowNull: false
   },
+  part_category: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  part_vehicle: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  part_manufacturer: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
   createdAt: {
     type: DataTypes.DATE,
     allowNull: true

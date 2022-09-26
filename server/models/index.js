@@ -20,8 +20,6 @@ const sequelize = new Sequelize('part_data', 'solo_account', 'solo_account', {
 
 const files = fs.readdirSync(__dirname);
 
-console.log(`files: ${files}`);
-
 for (let file of files) {
   if (file !== 'index.js') {
     const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);

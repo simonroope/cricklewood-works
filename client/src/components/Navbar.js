@@ -11,19 +11,6 @@ return (
           <span className="title text-6xl font-semibold lg:whitespace-nowrap whitespace-normal">Cricklewood Works</span>
         </a>
 
-        <div className="relative mx-auto text-gray-600 lg:block hidden">
-          <input
-              className="border-2 border-gray-300 bg-white h-10 pl-2 pr-8 rounded-lg text-sm focus:outline-none"
-              type="search" name="search" placeholder="Search..."/>
-              <button type="submit" className="absolute right-0 top-0 mt-3 mr-2">
-                <svg className="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 512 512">
-                  <path
-                    d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"/>
-                </svg>
-              </button>
-        </div>
-
       </div>
     </nav>
   </div>

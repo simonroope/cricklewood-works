@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { PartContext } from '../App.js';
 
 const Part = ({ singlePart }) => {
@@ -7,10 +8,19 @@ const Part = ({ singlePart }) => {
 
   const baseUrl = 'https://ipfs.io/ipfs/';
 
+  const navigate = useNavigate();
+
   const showPartDetailsHandler = () => {
+  
     console.log('Show Part Details Button part id:', singlePart.id);
+    console.log('SINGLEPART: ', singlePart)
     setPart(singlePart);
-    console.log('PART: ', part)
+    console.log('PART: ', part);
+
+    navigate('/partdetail');
+
+    //navigate('/partdetail/${singlePart.id}')
+    
   }
 
   return (
@@ -32,9 +42,9 @@ const Part = ({ singlePart }) => {
           </p>
         </div>
         <div className="flex justify-around px-6 pt-4 pb-2">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{singlePart.part_category}</span>
+          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{singlePart.part_vehicle}</span>
+          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{singlePart.part_manufacturer}</span>
         </div>
         <div className="flex content-end justify-center px-6 pt-4 pb-2">
           <button className="bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" onClick={showPartDetailsHandler}>Show More</button>

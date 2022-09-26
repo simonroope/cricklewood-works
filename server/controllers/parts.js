@@ -12,13 +12,23 @@ exports.listParts = async (request, response) => {
     }
   };
 
+  exports.listFilteredCategoryParts = async (request, response) => {
+    try {
+      const allCatParts = await db.Part.findAll({ where: { part_category: request.params.catname }});
+      console.log('category name: ', request.params.catname)
+      response.send(allCatParts);
+    } catch (error) {
+      console.log(error);
+      response.sendStatus(500);
+    }
+  };
+
   // Post.findAll({ where: { id: [1,2,3] // Same as using `id: { [Op.in]: [1,2,3] }`}});
 
   exports.listPartDetails = async (request, response) => {
     try {
       console.log(`Controller - call listPartDetails: ${request.params.id}`);
       const allPartDetails = await db.PartDetail.findAll({ where: { part_id: request.params.id }});
-      console.log(`Controller - called listPartDetails`);
       response.send(allPartDetails);
     } catch (error) {
       console.log(error);

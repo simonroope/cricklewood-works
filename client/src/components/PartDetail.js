@@ -1,13 +1,23 @@
 import { useState, useEffect, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import { PartContext } from '../App.js';
 
 import { getPartDetails } from '../utils/partService.js';
 
 import ImageGallery from 'react-image-gallery';
 
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import IconButton from '@mui/material/IconButton';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+
+import { Home } from "@mui/icons-material";
+import Button from "@mui/material/Button";
+
 
 const PartDetail = () => {
 
+  const navigate = useNavigate();
   const { part } = useContext(PartContext);
 
   const baseUrl = 'https://ipfs.io/ipfs/';
@@ -56,8 +66,12 @@ const PartDetail = () => {
           <p className="text-gray-700 text-lg mb-2">
             {part.part_long_name}
           </p>
-          <div className="flex justify-center">
-            <button className="bg-green-600 rounded-md m-4 px-6 py-2 text-lg text-white font-semibold">Buy</button>
+          <div className="flex justify-start">
+            <div className="mt-10">
+              <Button onClick={() => navigate(-1)} fontSize="large" variant="outlined" startIcon={<ArrowCircleLeftIcon />}>
+                Go Back
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -68,10 +82,3 @@ const PartDetail = () => {
 }
 
 export default PartDetail;
-
-
-// pt-10 pl-10
-
-
-
-
