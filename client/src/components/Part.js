@@ -1,38 +1,58 @@
-import { useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PartContext } from '../App.js';
 
+import { updatePartWishStatus } from '../utils/partService.js';
+
+import IconButton from '@mui/material/IconButton';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+
 const Part = ({ singlePart }) => {
 
-  const { setPart, part } = useContext(PartContext);
+  const { part, setPart } = useContext(PartContext);
+  const [ wishStatus, setWishStatus ] = useState(false);
 
   const baseUrl = 'https://ipfs.io/ipfs/';
 
   const navigate = useNavigate();
 
   const showPartDetailsHandler = () => {
-  
-    console.log('Show Part Details Button part id:', singlePart.id);
-    console.log('SINGLEPART: ', singlePart)
     setPart(singlePart);
-    console.log('PART: ', part);
-
     navigate('/partdetail');
-
-    //navigate('/partdetail/${singlePart.id}')
-    
   }
+
+  const wishListHandler = () => {
+    updatePartWishStatus(singlePart.id, !singlePart.wish_status);
+    setWishStatus(!wishStatus);
+  }
+
+  useEffect(() => {
+    //const init = async () => {
+      setWishStatus(singlePart.wish_status);
+    //}
+    //  init()
+  }, [])
 
   return (
 
     <div className="rounded shadow-lg">
 
-      <button className="aspect-square">
-        <img className="w-full h-full object-cover object-center hover:opacity-50" 
+      <div className="relative aspect-square">
+        <img className="block w-full h-full object-cover object-center hover:opacity-50 hover: cursor-pointer" 
              src={`${baseUrl}${singlePart.part_photo_1}`}
              alt={singlePart.part_short_name} title={singlePart.part_short_name} 
-             onClick={showPartDetailsHandler}/>
-      </button>
+             onClick={showPartDetailsHandler}/>  
+
+          <div className="absolute bottom-0 right-0">
+          <IconButton
+            onClick={wishListHandler}
+            color={wishStatus ? "error" : "inherit"}
+          >
+            {wishStatus ? <FavoriteIcon fontSize="large"/> : <FavoriteBorderIcon fontSize="large"/>}
+          </IconButton>
+          </div>
+      </div>
    
       <div className="">
         <div className="px-6 py-4">

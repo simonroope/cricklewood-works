@@ -3,7 +3,7 @@ const NavBar = () => {
 return (
 
   <div className="max-w-2xl mx-auto">
-    <nav className="border-gray-200 px-2 m-10">
+    <nav className="border-gray-200 px-2 m-5">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
  
         <a href='/' className="flex text-center">

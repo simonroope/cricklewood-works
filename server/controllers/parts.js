@@ -36,6 +36,19 @@ exports.listParts = async (request, response) => {
     }
   };
 
+  exports.updatePartWishStatus = async (request, response) => {
+    try {
+      const partWishStatus = await db.Part.update(
+        { wish_status: request.params.status },
+        { where: { id: request.params.id } }
+      )
+      response.send(partWishStatus);
+    } catch (error) {
+      console.log(error);
+      response.sendStatus(500);
+    }
+  };
+
   exports.createPart = async (request, response) => {
     console.log('Controller - createPart - request.body: ', request.body);
     try {

@@ -11,15 +11,25 @@ export const getParts = async () => {
 };
 
 export const getPartDetails = async (partId) => {
-    try {
-      const result = await fetch(`${baseURL}/partdetails/${partId}`);
-      const resultData = await result.json();
-      //console.log('result: ', resultData);
-      return resultData;
-    } catch (error) {
-      console.log('Error: Service - getPartDetails: ', error);
-    }
-  };
+  try {
+    const result = await fetch(`${baseURL}/partdetails/${partId}`);
+    const resultData = await result.json();
+    //console.log('result: ', resultData);
+    return resultData;
+  } catch (error) {
+    console.log('Error: Service - getPartDetails: ', error);
+  }
+};
+
+export const updatePartWishStatus = (partId, status) => {  
+  console.log('Service - updatePartWishStatus: ', partId, status)
+  return fetch(`${baseURL}/parts/${partId}/${status}`, {
+    method: 'PUT',
+    headers: { 'Content-type': 'application/json' },
+    body: JSON.stringify({ id: partId, wish_status: status })
+  }).then((result) => result.json())
+    .catch(error => console.log('Error: Service - postPart: ', partId, ' - ', status))
+};
 
 export const postPart = (part) => {  
   console.log('Service - postPart: ', part)

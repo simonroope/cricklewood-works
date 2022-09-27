@@ -35,6 +35,10 @@ module.exports = (sequelize, DataTypes) => sequelize.define('Part', {
     type: DataTypes.STRING,
     allowNull: false
   },
+  wish_status: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false
+  },
   createdAt: {
     type: DataTypes.DATE,
     allowNull: true

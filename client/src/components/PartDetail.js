@@ -8,10 +8,6 @@ import { getPartDetails } from '../utils/partService.js';
 import ImageGallery from 'react-image-gallery';
 
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
-import IconButton from '@mui/material/IconButton';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-
-import { Home } from "@mui/icons-material";
 import Button from "@mui/material/Button";
 
 
@@ -24,20 +20,16 @@ const PartDetail = () => {
 
   const [images, setImages] = useState([]);
 
-  console.log('PartDetails part: ', part.part_short_name);
-
   useEffect(() => {
     const init = async () => {
 
-      // Retrive details of part from db
+      // Retrive additional details of part from db
       const details = await getPartDetails(part.id);
-      console.log('details: ', details);
       
       // Unpack image hashes from db column
       const detailImages = details[0].part_photos.split(',')
-      //console.log('detailImages: ', detailImages);
      
-      // Format data required by image gallery
+      // Data format required by image gallery
       // {
       //  original: 'https://picsum.photos/id/1018/1000/600/',
       //  thumbnail: 'https://picsum.photos/id/1018/250/150/',
@@ -46,8 +38,7 @@ const PartDetail = () => {
       // setImages( detailImages.map(url => ({ original: `${baseUrl}${url}`, thumbnail: `${baseUrl}${url}` })))
       const galleryImages = detailImages.map(url => ({ original: `${baseUrl}${url}`, thumbnail: `${baseUrl}${url}` }));
     
-      setImages(galleryImages) 
-      //console.log('images: ', images);
+      setImages(galleryImages)
      
     }
 
@@ -58,7 +49,7 @@ const PartDetail = () => {
 
     <div className="flex p-10">
       <div className="w-1/2">
-        <ImageGallery items={ images } />
+        <ImageGallery items={ images } showBullets={ true }/>
       </div>
       <div className="">
         <div className="p-10">
