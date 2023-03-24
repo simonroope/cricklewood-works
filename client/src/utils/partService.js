@@ -2,28 +2,19 @@ const baseURL = 'http://localhost:3001';
 
 const partsXK = require('../assets/partsXK.json')
 
-console.log('XK: ', partsXK)
+//console.log('XK: ', partsXK)
 
-export const getParts = async () => {
-  try {
-    const result = await fetch(`${baseURL}/parts`);
-    const resultData = await result.json();
-    return resultData;
-  } catch (error) {
-    console.log('Error: Service - getParts: ', error);
-  }
-};
+export const getParts = async () => { return partsXK }
 
-export const getPartDetails = async (partId) => {
-  try {
-    const result = await fetch(`${baseURL}/partdetails/${partId}`);
-    const resultData = await result.json();
-    //console.log('result: ', resultData);
-    return resultData;
-  } catch (error) {
-    console.log('Error: Service - getPartDetails: ', error);
-  }
-};
+// export const getParts = async () => {
+//   try {
+//     const result = await fetch(`${baseURL}/parts`);
+//     const resultData = await result.json();
+//     return resultData;
+//   } catch (error) {
+//     console.log('Error: Service - getParts: ', error);
+//   }
+// };
 
 export const updatePartWishStatus = (partId, status) => {  
   console.log('Service - updatePartWishStatus: ', partId, status)

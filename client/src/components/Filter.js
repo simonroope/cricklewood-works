@@ -3,7 +3,7 @@ import { PartContext } from '../App.js';
 
 const Filter = () => {
 
-    const { allParts, parts, setParts } = useContext(PartContext);
+    const { allParts, setParts } = useContext(PartContext);
 
     const [ selectedCategory, setSelectedCategory ] = useState('select a Category')
     const [ selectedVehicle, setSelectedVehicle ] = useState('select a Vehicle')
@@ -56,7 +56,7 @@ const Filter = () => {
                   <option value="Carburetter">Carburetter</option>
                   <option value="Engine">Engine</option>
                   <option value="Instrument">Instrument</option>
-                  <option value="Motif">Motif</option>
+                  <option value="Fittings">Fittings</option>
                   <option value="Steering">Steering</option>
                 </select>
               </div>
@@ -64,7 +64,7 @@ const Filter = () => {
               <div>
                 <select name='vehicleOptions' onChange={event => handleSelect(event, null, 'vehicle')} value={selectedVehicle} required className="mr-2 bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
                   <option value=''>select a Vehicle</option>
-                  <option value="Aston Martin">Aston Martin</option>
+                  <option value="Bentley">Bentley</option>
                   <option value="Jaguar">Jaguar</option>
                   <option value="Lagonda">Lagonda</option>
                   <option value="MG">MG</option>
@@ -74,7 +74,7 @@ const Filter = () => {
               <div>
                 <select name='manufacturerOptions' onChange={event => handleSelect(event, null, null, 'manufacturer')} value={selectedManufacturer} required className="mr-2 bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
                   <option value=''>select a Manufacturer</option>
-                  <option value="Derrington">Derrington</option>
+                  <option value="Burmen">Burmen</option>
                   <option value="Fray">Fray</option>
                   <option value="Smiths">Smiths</option>
                   <option value="SU">SU</option>

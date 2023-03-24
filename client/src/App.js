@@ -20,8 +20,10 @@ function App() {
   const [part, setPart] = useState([]);
 
   useEffect(() => {
-    getParts().then(partList => { return setAllParts(partList) })
+    getParts().then(partList => { setAllParts(partList) })
   }, [])
+
+  console.log('allParts: ', allParts)
 
   useEffect(() => {
     getParts().then(partList => { return setParts(partList) })
@@ -39,6 +41,7 @@ function App() {
           <Route path='partdetail' element={<PartDetail></PartDetail>}>
           </Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </PartContext.Provider>
 

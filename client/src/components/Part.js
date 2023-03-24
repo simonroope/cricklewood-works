@@ -13,7 +13,7 @@ const Part = ({ singlePart }) => {
   const { part, setPart } = useContext(PartContext);
   const [ wishStatus, setWishStatus ] = useState(false);
 
-  const baseUrl = 'https://ipfs.io/ipfs/';
+  const baseUrl = 'https://cricklewoodworks.com/';
 
   const navigate = useNavigate();
 
@@ -40,42 +40,40 @@ const Part = ({ singlePart }) => {
 
       <div className="relative aspect-square">
         <img className="block w-full h-full object-cover object-center hover:opacity-50 hover: cursor-pointer" 
-             src={`${baseUrl}${singlePart.part_photo_1}`}
-             alt={singlePart.part_short_name} title={singlePart.part_short_name} 
+            //  src={`${baseUrl}${singlePart.category}/${singlePart.type}/${singlePart.photos[0]}`}
+             alt={singlePart.title} title={singlePart.title} 
              onClick={showPartDetailsHandler}/>  
 
           <div className="absolute bottom-0 right-0">
-          <IconButton
-            onClick={wishListHandler}
-            color={wishStatus ? "error" : "inherit"}
-          >
-            {wishStatus ? <FavoriteIcon fontSize="large"/> : <FavoriteBorderIcon fontSize="large"/>}
-          </IconButton>
+            <IconButton
+              onClick={wishListHandler}
+              color={wishStatus ? "error" : "inherit"}
+            >
+              {wishStatus ? <FavoriteIcon fontSize="large"/> : <FavoriteBorderIcon fontSize="large"/>}
+            </IconButton>
           </div>
       </div>
    
-      <div className="">
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{singlePart.part_short_name}</div>
-          <p className="text-gray-700 text-base">
-            {singlePart.part_long_name}
-          </p>
+      <div className="relative">
+        <div className="text-center px-6 py-4">
+          <p className="font-bold text-xl mb-2">{singlePart.title}</p>
+          <p className="">{singlePart.price}</p>
         </div>
-        <div className="flex justify-around px-6 pt-4 pb-2">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{singlePart.part_category}</span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{singlePart.part_vehicle}</span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{singlePart.part_manufacturer}</span>
-        </div>
-        <div className="flex content-end justify-center px-6 pt-4 pb-2">
-          <button className="bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" onClick={showPartDetailsHandler}>Show More</button>
-          <button className="bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Buy</button>
+        <div className="">
+          <div className="flex justify-around px-6 py-2">
+            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{singlePart.marque}</span>
+            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{singlePart.category}</span>
+            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{singlePart.manufacturer}</span>
+          </div>
+          <div className="flex content-end justify-center px-6 pt-4 pb-2">
+            <button className="bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" onClick={showPartDetailsHandler}>Show More</button>
+          </div>
         </div>
       </div>
   
     </div>
   
   )
-
 }
   
 export default Part;
