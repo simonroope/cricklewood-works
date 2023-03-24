@@ -1,5 +1,9 @@
 const baseURL = 'http://localhost:3001';
 
+const partsXK = require('../assets/partsXK.json')
+
+console.log('XK: ', partsXK)
+
 export const getParts = async () => {
   try {
     const result = await fetch(`${baseURL}/parts`);
