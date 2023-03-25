@@ -11,7 +11,8 @@
     "condition": "needs refurb",
     "desc": "",
     "price": "£250",
-    "photos": ["xk-speedo-1-00.jpg", "xk-speedo-1-01.jpg", "xk-speedo-1-02.jpg"]
+    "photos": ["xk-speedo-1-00.jpg", "xk-speedo-1-01.jpg", "xk-speedo-1-02.jpg"],
+    "sold": false
   },
   { 
     "category": "Instrument",
@@ -25,7 +26,8 @@
     "condition": "needs refurb",
     "desc": "",
     "price": "£250",
-    "photos": ["xk-speedo-2-00.jpg", "xk-speedo-2-01.jpg", "xk-speedo-2-02.jpg"]
+    "photos": ["xk-speedo-2-00.jpg", "xk-speedo-2-01.jpg", "xk-speedo-2-02.jpg"],
+    "sold": false
   },
   { 
     "category": "Instrument",
@@ -38,7 +40,8 @@
     "condition": "needs refurb",
     "desc": "",
     "price": "£1,200",
-    "photos": ["bentley-speedo-1-00.jpg", "bentley-speedo-1-01.jpg", "bentley-speedo-1-02.jpg"]
+    "photos": ["bentley-speedo-1-00.jpg", "bentley-speedo-1-01.jpg", "bentley-speedo-1-02.jpg"],
+    "sold": false
   },
   { 
     "category": "Instrument",
@@ -52,7 +55,8 @@
     "partno": "X.49035/5",
     "desc": "",
     "price": "£250",
-    "photos": ["xk-rev-1-00.jpg", "xk-rev-1-01.jpg", "xk-rev-1-02.jpg"]
+    "photos": ["xk-rev-1-00.jpg", "xk-rev-1-01.jpg", "xk-rev-1-02.jpg"],
+    "sold": false
   },
   {
     "category": "Carburetter",
@@ -66,7 +70,8 @@
     "condition": "needs refurb",
     "desc": "",
     "price": "£200",
-    "photos": ["h12-1-00.jpg", "h12-1-01.jpg", "h12-1-02.jpg"]
+    "photos": ["h12-1-00.jpg", "h12-1-01.jpg", "h12-1-02.jpg"],
+    "sold": false
   },
   { 
     "category": "Carburetter",
@@ -80,7 +85,8 @@
     "condition": "fully restored",
     "desc": "",
     "price": "£7,500",
-    "photos": ["h8-1-00.jpg", "h8-1-01.jpg", "h8-1-02.jpg"]
+    "photos": ["h8-1-00.jpg", "h8-1-01.jpg", "h8-1-02.jpg"],
+    "sold": false
   },
   {
     "category": "Carburetter",
@@ -94,7 +100,23 @@
     "condition": "need restoration",
     "desc": "",
     "price": "£200",
-    "photos": ["h6-1-00.jpg", "h6-1-01.jpg", "h6-1-02.jpg"]
+    "photos": ["h6-1-00.jpg", "h6-1-01.jpg", "h6-1-02.jpg"],
+    "sold": false
+  },
+  {
+    "category": "Carburetter",
+    "type": "Body",
+    "manufacturer": "SU",
+    "part": "4856",
+    "marque": "Jaguar",
+    "vehicle": "C-Type",
+    "title": "H8 2\" SU Carburetter prototype body",
+    "partno": "4856",
+    "condition": "original",
+    "desc": "",
+    "price": "£450",
+    "photos": ["h8-body1-00.jpg", "h8-body-1-01.jpg", "h8-body-1-02.jpg", "h8-body-1-03.jpg"],
+    "sold": true
   },
   { 
     "category": "Carburetter",
@@ -108,7 +130,8 @@
     "condition": "original",
     "desc": "",
     "price": "£350",
-    "photos": ["1178-1-00.jpg", "1178-1-01.jpg", "1178-1-02.jpg"]
+    "photos": ["1178-1-00.jpg", "1178-1-01.jpg", "1178-1-02.jpg", "1178-1-03.jpg"],
+    "sold": false
   },
   {
     "category": "Carburetter",
@@ -122,7 +145,8 @@
     "condition": "original",
     "desc": "",
     "price": "£150",
-    "photos": ["1180a-1-00.jpg", "1180a-1-01.jpg", "1180a-1-02.jpg"]
+    "photos": ["1180a-1-00.jpg", "1180a-1-01.jpg", "1180a-1-02.jpg", "1180a-1-03.jpg"],
+    "sold": false
   },
   {
     "category": "Carburetter",
@@ -136,7 +160,8 @@
     "condition": "original",
     "desc": "",
     "price": "£100",
-    "photos": ["1180c-1-00.jpg", "1180c-1-01.jpg", "1180c-1-02.jpg"] 
+    "photos": ["1180c-1-00.jpg", "1180c-1-01.jpg", "1180c-1-02.jpg", "1180c-1-03.jpg"],
+    "sold": false
   },
   {
     "category": "Carburetter",
@@ -150,11 +175,12 @@
     "condition": "original",
     "desc": "",
     "price": "£100",
-    "photos": ["1180c-2-00.jpg", "1180c-2-01.jpg", "1180c-2-02.jpg"]
+    "photos": ["1180c-2-00.jpg", "1180c-2-01.jpg", "1180c-2-02.jpg", "1180c-2-03.jpg"],
+    "sold": false
   },
   { 
     "category": "Steering",
-    "type": "Steering Column",
+    "type": "Column",
     "manufacturer": "Burman",
     "part": "xk120 col rhd",
     "marque": "Jaguar",
@@ -164,11 +190,12 @@
     "condition": "needs refurb",
     "desc": "",
     "price": "£2,000",
-    "photos": ["xk-steering-col-1-00.jpg", "xk-steering-col-1-01.jpg", "xk-steering-col-1-02.jpg"]
+    "photos": ["xk-steering-col-1-00.jpg", "xk-steering-col-1-01.jpg", "xk-steering-col-1-02.jpg", "xk-steering-col-1-02.jpg"],
+    "sold": false
   },
   {
     "category": "Steering",
-    "type": "Steering Idler",
+    "type": "Idler",
     "manufacturer": "Burman",
     "part": "xk120 idler rhd",
     "marque": "Jaguar",
@@ -178,24 +205,12 @@
     "condition": "original",
     "desc": "",
     "price": "£500",
-    "photos": ["xk-steering-idler-1-00.jpg", "xk-steering-idler-1-01.jpg", "xk-steering-idler-1-02.jpg"]
+    "photos": ["xk-steering-idler-1-00.jpg", "xk-steering-idler-1-01.jpg", "xk-steering-idler-1-02.jpg", "xk-steering-idler-1-03.jpg"],
+    "sold": false
   },
   {
     "category": "Steering",
-    "type": "Steering Drop Arm",
-    "manufacturer": "Jaguar",
-    "part": "xk120 arm rhd",
-    "marque": "Jaguar",
-    "vehicle": "XK120",
-    "title": "XK120 RHD Steering Drop Arm",
-    "partno": "S.9/20", "condition": "original",
-    "desc": "",
-    "price": "£250",
-    "photos": ["xk-steering-arm-1-00.jpg", "xk-steering-arm-1-01.jpg", "xk-steering-arm-1-02.jpg"]
-  },
-  {
-    "category": "Steering",
-    "type": "Steering Drop Arm",
+    "type": "Drop Arm",
     "manufacturer": "Jaguar",
     "part": "xk120 arm rhd",
     "marque": "Jaguar",
@@ -205,12 +220,28 @@
     "condition": "original",
     "desc": "",
     "price": "£250",
-    "photos": ["xk-steering-arm-2-00.jpg", "xk-steering-arm-2-01.jpg", "xk-steering-arm-2-02.jpg"]
+    "photos": ["xk-steering-arm-1-00.jpg", "xk-steering-arm-1-01.jpg", "xk-steering-arm-1-02.jpg", "xk-steering-arm-1-03.jpg"],
+    "sold": false
+  },
+  {
+    "category": "Steering",
+    "type": "Drop Arm",
+    "manufacturer": "Jaguar",
+    "part": "xk120 arm rhd",
+    "marque": "Jaguar",
+    "vehicle": "XK120",
+    "title": "XK120 RHD Steering Drop Arm",
+    "partno": "S.9/20",
+    "condition": "original",
+    "desc": "",
+    "price": "£250",
+    "photos": ["xk-steering-arm-2-00.jpg", "xk-steering-arm-2-01.jpg", "xk-steering-arm-2-02.jpg",  "xk-steering-arm-2-03.jpg"],
+    "sold": false
   },
   { 
     "category": "Fittings",
     "type": "Bonnet Badge",
-    "manufacturer": "J.Bray",
+    "manufacturer": "J.Fray",
     "part": "xk120 bonnet badge",
     "marque": "Jaguar",
     "vehicle": "XK120",
@@ -218,13 +249,14 @@
     "partno": "BD.2386",
     "condition": "original",
     "desc": "",
-    "price": "£400",
-    "photos": ["xk-badge-1-00.jpg", "xk-badge-1-01.jpg", "xk-badge-1-02.jpg"]
+    "price": "£395",
+    "photos": ["xk-badge-1-00.jpg", "xk-badge-1-01.jpg", "xk-badge-1-02.jpg", "xk-badge-1-03.jpg", "xk-badge-1-04.jpg"],
+    "sold": false
   },
   {
     "category": "Fittings",
     "type": "Bonnet Badge",
-    "manufacturer": "J.Bray",
+    "manufacturer": "J.Fray",
     "part": "xk120 bonnet badge",
     "marque": "Jaguar",
     "vehicle": "XK120",
@@ -232,20 +264,38 @@
     "partno": "BD.2386",
     "condition": "original",
     "desc": "",
-    "price": "£400",
-    "photos": ["xk-badge-2-00.jpg", "xk-badge-2-01.jpg", "xk-badge-2-02.jpg"] },
+    "price": "£395",
+    "photos": ["xk-badge-2-00.jpg", "xk-badge-2-01.jpg", "xk-badge-2-02.jpg", "xk-badge-2-03.jpg", "xk-badge-2-04.jpg"],
+    "sold": false
+  },
   { 
-    "category": "Fittings",
+    "category": "Electrical",
     "type": "Horn Push",
     "manufacturer": "",
     "part": "xk120 horn push",
     "marque": "Jaguar",
     "vehicle": "XK120",
     "title": "XK120 Horn Push",
-    "partno": "BD.5678",
+    "partno": "322167",
     "condition": "original",
     "desc": "",
-    "price": "£150",
-    "photos": ["xk-horn-1-00.jpg", "xk-horn-1-01.jpg", "xk-horn-1-02.jpg"]
+    "price": "£190",
+    "photos": ["xk-horn-push-1-00.jpg", "xk-horn-push-1-01.jpg", "xk-horn-push-1-02.jpg", "xk-horn-push-1-03.jpg", "xk-horn-push-1-04.jpg"],
+    "sold": false
+  },
+  { 
+    "category": "Electrical",
+    "type": "Switch",
+    "manufacturer": "Lucas",
+    "part": "xk120 wiper switch",
+    "marque": "Jaguar",
+    "vehicle": "XK120",
+    "title": "XK120 Windscreen Wiper switch",
+    "partno": "31228/A",
+    "condition": "NOS",
+    "desc": "",
+    "price": "£200",
+    "photos": ["xk-wiper-switch-1-00.jpg", "xk-wiper-switch-1-01.jpg", "xk-wiper-switch-1-02.jpg", "xk-wiper-switch-1-03.jpg"],
+    "sold": false
   }
 ]

@@ -13,7 +13,7 @@ const Part = ({ singlePart }) => {
   const { part, setPart } = useContext(PartContext);
   const [ wishStatus, setWishStatus ] = useState(false);
 
-  const baseUrl = 'https://cricklewoodworks.com/';
+  const baseUrl = 'https://cricklewoodworks.com/photos/';
 
   const navigate = useNavigate();
 
@@ -40,9 +40,9 @@ const Part = ({ singlePart }) => {
 
       <div className="relative aspect-square">
         <img className="block w-full h-full object-cover object-center hover:opacity-50 hover: cursor-pointer" 
-            //  src={`${baseUrl}${singlePart.category}/${singlePart.type}/${singlePart.photos[0]}`}
-             alt={singlePart.title} title={singlePart.title} 
-             onClick={showPartDetailsHandler}/>  
+           src={`${baseUrl}${singlePart.category.toLowerCase()}/${singlePart.type.toLowerCase().replace(' ','-')}/${singlePart.photos[0]}`}
+           alt={singlePart.title} title={singlePart.title} 
+           onClick={showPartDetailsHandler} />  
 
           <div className="absolute bottom-0 right-0">
             <IconButton
@@ -57,7 +57,7 @@ const Part = ({ singlePart }) => {
       <div className="relative">
         <div className="text-center px-6 py-4">
           <p className="font-bold text-xl mb-2">{singlePart.title}</p>
-          <p className="">{singlePart.price}</p>
+          <p className="">{singlePart.sold ? 'SOLD' : singlePart.price}</p>
         </div>
         <div className="">
           <div className="flex justify-around px-6 py-2">

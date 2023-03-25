@@ -17,15 +17,15 @@ const Filter = () => {
       event.preventDefault()
     
       if (category) {
-        setParts(allParts.filter( part => part.part_category === event.target.value ))
+        setParts(allParts.filter( part => part.category === event.target.value ))
         setSelectedCategory(event.target.value)
       }
       if (vehicle) {
-        setParts(allParts.filter( part => part.part_vehicle === event.target.value ))
+        setParts(allParts.filter( part => part.marque === event.target.value ))
         setSelectedVehicle(event.target.value)
       }
       if (manufacturer) {
-        setParts(allParts.filter( part => part.part_manufacturer === event.target.value ))
+        setParts(allParts.filter( part => part.manufacturer === event.target.value ))
         setSelectedManufacturer(event.target.value)
       }
     }
@@ -54,9 +54,11 @@ const Filter = () => {
                 <select name='categoryOptions' onChange={event => handleSelect(event, 'category')} value={selectedCategory} required className="mr-2 bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
                   <option value=''>select a Category</option>
                   <option value="Carburetter">Carburetter</option>
+                  <option value="Electrical">Electrical</option>
                   <option value="Engine">Engine</option>
-                  <option value="Instrument">Instrument</option>
                   <option value="Fittings">Fittings</option>
+                  <option value="Instrument">Instrument</option>
+                  <option value="Literature">Literature</option>
                   <option value="Steering">Steering</option>
                 </select>
               </div>
@@ -67,6 +69,7 @@ const Filter = () => {
                   <option value="Bentley">Bentley</option>
                   <option value="Jaguar">Jaguar</option>
                   <option value="Lagonda">Lagonda</option>
+                  <option value="Mercedes">Mercedes Benz</option>
                   <option value="MG">MG</option>
                 </select>
               </div>
@@ -74,8 +77,8 @@ const Filter = () => {
               <div>
                 <select name='manufacturerOptions' onChange={event => handleSelect(event, null, null, 'manufacturer')} value={selectedManufacturer} required className="mr-2 bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
                   <option value=''>select a Manufacturer</option>
-                  <option value="Burmen">Burmen</option>
-                  <option value="Fray">Fray</option>
+                  <option value="Burman">Burman</option>
+                  <option value="J.Fray">J.Fray</option>
                   <option value="Smiths">Smiths</option>
                   <option value="SU">SU</option>
                 </select>

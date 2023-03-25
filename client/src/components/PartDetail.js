@@ -14,20 +14,12 @@ const PartDetail = () => {
   const navigate = useNavigate();
   const { part } = useContext(PartContext);
 
-  const baseUrl = 'https://cricklewoodworks.com/';
+  const baseUrl = 'https://cricklewoodworks.com/photos/';
 
   const [images, setImages] = useState([]);
 
   useEffect(() => {
     const init = async () => {
-
-      //console.log('photos: ', part.photos)
-
-      // partsXK.filter((e,i) => i == 0).map( e => console.log(`${url}/${e.category.toLowerCase()}/
-      // ${e.type.toLowerCase()}/
-      // ${e.manufacturer.toLowerCase()}/                                                             
-      // ${e.part.toLowerCase()}/
-      // ${e.photos[0]}`)
 
       // Data format required by image gallery
       // {
@@ -35,9 +27,9 @@ const PartDetail = () => {
       //  thumbnail: 'https://picsum.photos/id/1018/250/150/',
       // }
       
-      part.map(p => console.log('photos: ', p.photos))
+      const url = `${baseUrl}${part.category.toLowerCase()}/${part.type.toLowerCase().replace(' ','-')}/`
 
-      setImages(part.photos.map(url => ({ original: `${baseUrl}${url}`, thumbnail: `${baseUrl}${url}` })))
+      setImages(part.photos.map(jpg => ({ original: `${url}${jpg}`, thumbnail: `${url}${jpg}` })))
     }
 
     init()
@@ -55,12 +47,10 @@ const PartDetail = () => {
           <p className="font-semibold text-xl mb-2">Original {part.manufacturer} part no: {part.partno}</p>
           <p className="font-semibold text-xl mb-2">{part.price}</p>
           <p className="text-gray-700 text-lg mb-2">{part.desc}</p>
-          <div className="flex justify-start">
-            <div className="mt-10">
-              <Button onClick={() => navigate(-1)} fontSize="large" variant="outlined" startIcon={<ArrowCircleLeftIcon />}>
-                Go Back
-              </Button>
-            </div>
+          <div className="flex justify-start mt-10">
+            <Button onClick={() => navigate(-1)} fontSize="large" variant="outlined" startIcon={<ArrowCircleLeftIcon />}>
+              Go Back
+            </Button>
           </div>
         </div>
       </div>

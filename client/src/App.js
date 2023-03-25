@@ -20,13 +20,7 @@ function App() {
   const [part, setPart] = useState([]);
 
   useEffect(() => {
-    getParts().then(partList => { setAllParts(partList) })
-  }, [])
-
-  console.log('allParts: ', allParts)
-
-  useEffect(() => {
-    getParts().then(partList => { return setParts(partList) })
+    getParts().then(partList => { setAllParts(partList); setParts(partList) })
   }, [])
 
   return (
